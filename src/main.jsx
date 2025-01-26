@@ -7,7 +7,7 @@ import Login from "./pages/Login.jsx";
 import Layout from "./Layout.jsx";
 import About from "./pages/About.jsx";
 import Loan from "./components/Loan.jsx";
-import LoadDetail from "./pages/Loandetails.jsx";
+import LoanDetails from "./pages/Loandetails.jsx";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/loandetail",
-        element: <LoadDetail />,
+        element: <LoanDetails />,
       },
       {
         path: "/loan",

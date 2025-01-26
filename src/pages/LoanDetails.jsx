@@ -3,7 +3,7 @@ import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
 import axios from 'axios';
 
-const LoadDetail = () => {
+const LoanDetail = () => {
 
   const [data , setData] = useState([])
 
@@ -56,4 +56,4 @@ const LoadDetail = () => {
   );
 };
 
-export default LoadDetail;
+export default LoanDetail;
