@@ -18,10 +18,6 @@ const Navbar = () => {
       });
   };
 
-  // useEffect(() => {
-  //   logout();
-  // }, []);
-
   return (
     <div className="flex justify-between items-center p-6  bg-[#b41938] text-lg text-[#ece6e6]">
       <div className="flex items-center gap-2">

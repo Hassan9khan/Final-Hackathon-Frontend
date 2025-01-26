@@ -16,13 +16,11 @@ const Loan = () => {
 
   const [responseMessage, setResponseMessage] = useState("");
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle guarantor input changes
   const handleGuarantorChange = (index, e) => {
     const { name, value } = e.target;
     const updatedGuarantors = [...formData.guarantors];
@@ -30,7 +28,6 @@ const Loan = () => {
     setFormData({ ...formData, guarantors: updatedGuarantors });
   };
 
-  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     axios.post("http://localhost:3000/api/v1/loans" , formData)
@@ -47,7 +44,6 @@ const Loan = () => {
     <div className="max-w-xl mx-auto mt-10 p-6 bg-white shadow rounded">
       <h2 className="text-2xl font-bold mb-4">Create Loan</h2>
       <form onSubmit={handleSubmit}>
-        {/* User ID */}
         <label className="block mb-2">
           User ID:
           <input
@@ -60,7 +56,6 @@ const Loan = () => {
           />
         </label>
 
-        {/* Category */}
         <label className="block mb-2">
           Category:
           <select
@@ -82,7 +77,6 @@ const Loan = () => {
           </select>
         </label>
 
-        {/* Subcategory */}
         <label className="block mb-2">
           Subcategory:
           <input
@@ -95,7 +89,6 @@ const Loan = () => {
           />
         </label>
 
-        {/* Amount */}
         <label className="block mb-2">
           Amount (PKR):
           <input
@@ -108,7 +101,6 @@ const Loan = () => {
           />
         </label>
 
-        {/* Period */}
         <label className="block mb-2">
           Period (Years):
           <select
@@ -125,7 +117,6 @@ const Loan = () => {
           </select>
         </label>
 
-        {/* Guarantors */}
         <h3 className="text-xl font-bold mt-4">Guarantors</h3>
         {formData.guarantors.map((guarantor, index) => (
           <div key={index} className="mb-4">
@@ -176,7 +167,6 @@ const Loan = () => {
           </div>
         ))}
 
-        {/* Submit Button */}
         <button
           type="submit"
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
@@ -185,7 +175,6 @@ const Loan = () => {
         </button>
       </form>
 
-      {/* Response Message */}
       {responseMessage && (
         <p className="mt-4 text-center text-green-600">{responseMessage}</p>
       )}

@@ -41,13 +41,11 @@ const About = () => {
 
   const [responseMessage, setResponseMessage] = useState("");
 
-  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  // Handle guarantor input changes
   const handleGuarantorChange = (index, e) => {
     const { name, value } = e.target;
     const updatedGuarantors = [...formData.guarantors];
@@ -55,7 +53,6 @@ const About = () => {
     setFormData({ ...formData, guarantors: updatedGuarantors });
   };
 
-  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     axios
@@ -112,7 +109,6 @@ const About = () => {
             />
           </label>
 
-          {/* Category */}
           <label className="block mb-2">
             Category:
             <select
@@ -134,7 +130,6 @@ const About = () => {
             </select>
           </label>
 
-          {/* Subcategory */}
           <label className="block mb-2">
             Subcategory:
             <input
@@ -147,7 +142,6 @@ const About = () => {
             />
           </label>
 
-          {/* Amount */}
           <label className="block mb-2">
             Amount (PKR):
             <input
@@ -160,7 +154,6 @@ const About = () => {
             />
           </label>
 
-          {/* Period */}
           <label className="block mb-2">
             Period (Years):
             <select
@@ -176,9 +169,6 @@ const About = () => {
               <option value="5">5 Years</option>
             </select>
           </label>
-          <div></div>
-          {/* Guarantors */}
-          {/* <h3 className="text-xl font-bold mt-4">Guarantors</h3> */}
           {formData.guarantors.map((guarantor, index) => (
             <div key={index} className="mb-4 mt-3 pt-3">
               <label className="block mb-2">
@@ -228,7 +218,6 @@ const About = () => {
             </div>
           ))}
 
-          {/* Submit Button */}
           <button
             type="submit"
             className="btn bg-[#c81b3e] text-white  px-4 py-2  hover:bg-[#a11632]"
@@ -237,13 +226,11 @@ const About = () => {
           </button>
         </form>
 
-        {/* Response Message */}
         {responseMessage && (
           <p className="mt-4 text-center text-green-600">{responseMessage}</p>
         )}
       </div>
 
-      {/* Response Message */}
       {responseMessage && (
         <p className="mt-4 text-center text-green-600">{responseMessage}</p>
       )}
