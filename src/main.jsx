@@ -7,7 +7,7 @@ import Login from "./pages/Login.jsx";
 import Layout from "./Layout.jsx";
 import About from "./pages/About.jsx";
 import Loan from "./components/Loan.jsx";
-import LoanDetails from "./pages/Loandetails.jsx";
+import LoanDetails from "./pages/LoanDetails.jsx";
 
 const router = createBrowserRouter([
   {
