@@ -95,9 +95,8 @@ const About = () => {
 
       <div className="w-full  mx-auto mt-10 p-6  shadow rounded bg-white border-8">
         <h2 className="text-2xl font-bold mb-4">Create Loan</h2>
-        <form onSubmit={handleSubmit} className="grid grid-cols-2 gap-2">
-          {/* User ID */}
-          <label className="block mb-2">
+        <form onSubmit={handleSubmit} className="gap-2">
+          <div className="block mb-2">
             User ID:
             <input
               type="text"
@@ -107,9 +106,9 @@ const About = () => {
               className="input-bordered w-full p-2 border rounded mt-1"
               required
             />
-          </label>
+          </div>
 
-          <label className="block mb-2">
+          <div className="block mb-2">
             Category:
             <select
               name="category"
@@ -128,9 +127,9 @@ const About = () => {
               </option>
               <option value="Education Loans">Education Loans</option>
             </select>
-          </label>
+          </div>
 
-          <label className="block mb-2">
+          <div className="block mb-2">
             Subcategory:
             <input
               type="text"
@@ -140,9 +139,9 @@ const About = () => {
               className="input-bordered w-full p-2 border rounded mt-1"
               required
             />
-          </label>
+          </div>
 
-          <label className="block mb-2">
+          <div className="block mb-2">
             Amount (PKR):
             <input
               type="number"
@@ -152,9 +151,9 @@ const About = () => {
               className="input-bordered w-full p-2 border rounded mt-1"
               required
             />
-          </label>
+          </div>
 
-          <label className="block mb-2">
+          <div className="block mb-2">
             Period (Years):
             <select
               name="period"
@@ -168,10 +167,10 @@ const About = () => {
               <option value="4">4 Years</option>
               <option value="5">5 Years</option>
             </select>
-          </label>
+          </div>
           {formData.guarantors.map((guarantor, index) => (
-            <div key={index} className="mb-4 mt-3 pt-3">
-              <label className="block mb-2">
+            <div key={index} className="mb-4 mt-3 pt-3"> 
+              <div className="block mb-2">
                 Guarantor-Name:
                 <input
                   type="text"
@@ -181,8 +180,8 @@ const About = () => {
                   className="input-bordered w-full p-2 border rounded mt-1"
                   required
                 />
-              </label>
-              <label className="block mb-2">
+              </div>
+              <div className="block mb-2">
                 Email:
                 <input
                   type="email"
@@ -192,8 +191,8 @@ const About = () => {
                   className="input-bordered w-full p-2 border rounded mt-1"
                   required
                 />
-              </label>
-              <label className="block mb-2">
+              </div>
+              <div className="block mb-2">
                 CNIC:
                 <input
                   type="text"
@@ -203,8 +202,8 @@ const About = () => {
                   className="input-bordered w-full p-2 border rounded mt-1"
                   required
                 />
-              </label>
-              <label className="block mb-2">
+              </div>
+              <div className="block mb-2">
                 Location:
                 <input
                   type="text"
@@ -214,8 +213,8 @@ const About = () => {
                   className="input-bordered w-full p-2 border rounded mt-1"
                   required
                 />
-              </label>
-            </div>
+              </div>
+            </div> 
           ))}
 
           <button
